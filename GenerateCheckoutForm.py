@@ -6,12 +6,9 @@ Jeff Thompson | 2014 | www.jeffreythompson.org
 A script that generates checkout forms and hang tags 
 from a master list of students and equipment.
 
-Would be a mess to change too much, be definitely
-hackable as needed.
-
 A FEW CAVEATS:
 + 	Since the forms result as HTML, you may run into some
-	formatting issues.
+	formatting issues when printing.
 + 	Forms should be printed in landscape format - Chrome
 	seems to respect the CSS @page declaration, so I suggest
 	printing from there.
