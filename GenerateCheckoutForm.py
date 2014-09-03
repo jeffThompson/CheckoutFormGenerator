@@ -152,13 +152,13 @@ for index, item in enumerate(equipment):
 		# title and description
 		output += '<span class="equipmentDetails">'
 		output += '<h1>' + item.item_id + ': ' + item.item_name.upper() + '</h1>'
-		output += '<p>Manufacturer: <strong>' + item.manufacturer + '</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Serial #: <strong>' + item.serial_num + '</strong></p>'
+		output += '<p>Manufacturer: <strong>' + item.manufacturer + '</strong><span class="spacer">|</span>Serial #: <strong>' + item.serial_num + '</strong></p>'
 
 		output += '<h2>SHOULD INCLUDE</h2>'
 		output += '<p>' + item.should_include + '</p>'
 
 		# reminders
-		output += '<p class="reminder"><strong>CHECK LATE FEES FIRST &mdash; NO CHECKOUT UNTIL FEES ARE PAID!</strong></p>'
+		output += '<p class="reminder"><strong>CHECK LATE FEES FIRST -- NO CHECKOUT UNTIL FEES ARE PAID!</strong></p>'
 		output += '</span>'
 
 		# thumbnail image
@@ -221,7 +221,7 @@ for item in equipment:
 	# front
 	output += '<div class="hangTag hangTagEquipmentInfo">'
 	output += '<h1>' + item.item_name.upper() + '</h1>'
-	output += '<p>ID #: <strong>' + item.item_id + '</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Manufacturer: <strong>' + item.manufacturer + '</strong></p>'
+	output += '<p>ID #: <strong>' + item.item_id + '</strong><span class="spacer">|</span>Manufacturer: <strong>' + item.manufacturer + '</strong></p>'
 
 	if item.should_include != '':
 		output += '<p style="margin-top: 40px"><strong>SHOULD INCLUDE</strong></p>'

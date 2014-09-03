@@ -63,6 +63,7 @@ thead {
 }
 td {
 	border: 1px solid rgba(0,0,0, 0.2);
+	height: 2em;	/* ensures proper height for blank rows */
 	margin: 0;
 	padding: 8px;
 }
@@ -90,6 +91,9 @@ td {
 .reminder {
 	margin-top: 50px;
 	color: red;
+}
+.spacer {
+	margin: 0 1em 0 1em;
 }
 
 
