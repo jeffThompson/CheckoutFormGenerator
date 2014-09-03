@@ -1,0 +1,167 @@
+
+/* GENERATE CHECKOUT CSS */
+
+/* CSS RESET - DO NOT CHANGE */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure,  footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* THE REAL CSS – CHANGE AS YOU SEE FIT! */
+html, body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: black;
+}
+#wrapper {
+	width: 100%;
+	max-width: 900px;		/* doesn't effect printing, just online viewing */
+	margin: 50px auto;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+h1 {
+	font-size: 36px;
+	font-weight: 100;
+	margin-bottom: 3px;
+}
+h2 {
+	font-size: 22px;
+	line-height: 1.3em;
+	margin-top: 25px;
+}
+h3 {
+	font-size: 18px;
+	line-height: 1.3em;
+	font-weight: 600;
+}
+p {
+	line-height: 1.3em;
+}
+table, tr {
+	width: 100%;
+	border: none;
+	margin: 20px 0;
+	padding: 0;
+}
+tr, td {
+	page-break-inside: avoid !important;
+}
+tr:nth-child(even) {
+	background-color: rgb(247,247,247);
+}
+thead {
+	font-weight: 700;
+	background-color: rgb(235,235,235);
+}
+td {
+	border: 1px solid rgba(0,0,0, 0.2);
+	margin: 0;
+	padding: 8px;
+}
+
+
+
+/* TITLE PAGE FOR SEMESTER */
+#semesterTitlePage {
+	margin-top: 200px;
+	text-align: center;
+}
+#semesterTitlePage h1 {
+	font-size: 124px; 
+	font-weight: 100;
+}
+
+/* PAGE HEADERS */
+.pageLabel {
+	 float: left;
+}
+.pageDetails {
+	float: right;
+	text-align: right;
+}
+.reminder {
+	margin-top: 50px;
+	color: red;
+}
+
+
+/* EQUIPMENT INFORMATION */
+.equipmentDetails {
+	float: left;
+	width: 70%;
+}
+.thumbnail {
+	float: right;
+	width: 25%;
+	border: 1px solid rgba(0,0,0, 0.2);
+}
+
+
+/* HANG-TAG FORMATTING */
+/* note: because the page may be shurnk to print, these
+   dimensions will require some tweaking to print at the
+   right size */
+
+/* back side with equipment information */
+.hangTag {
+	float: left;
+	width: 300px;							/* 2.25" * 72ppi */
+	height: 180px;							/* 3.5" * 72ppi */
+	margin: 36px 0 0 36px;					/* 0.5" * 72ppi */
+	padding: 18px;							/* 0.25" * 72ppi */
+	border: 1px solid rgb(220,220,200);
+	page-break-inside: avoid !important;
+}
+.hangTagEquipmentInfo {
+	/* nothing special here :) */
+}
+
+/* front side with info for returning lost equipment */
+.hangTagReturnInfo {
+	margin-left: 0;
+	background-color: rgb(170,0,0);
+	color: white;
+	text-align: center;
+}
+.hangTagReturnInfo h1 {
+	font-size: 90px;
+	font-weight: 100;
+	margin-top: 13px;
+}
+.hangTagReturnInfo h3 {
+	font-size: 16;
+	font-weight: 100;
+	margin-bottom: 12px;
+}
+.hangTagReturnInfo p {
+	margin-top: 3px;
+	font-size: 9px;
+}
+
+/* UTILITY CLASSES */
+.clear {
+	clear: both;
+}
+.pageBreak {
+	margin-top: 100px;							/* format for browser viewing */
+	padding-top: 100px;
+	border-top: 1px solid rgba(0,0,0, 0.2);
+	page-break-after: always;
+}
+@media print { 
+	@page { size: landscape }
+	.pageBreak {
+		border: none;	/* remove dividing border and other formatting when printing */
+		margin: none;
+		padding: none;
+	}
+}
+
